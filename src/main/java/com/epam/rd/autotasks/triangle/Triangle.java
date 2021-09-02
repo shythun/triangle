@@ -26,7 +26,7 @@ class Triangle {
         Arrays.sort(lengthArray);
 
         if (lengthArray[0] + lengthArray[1] == lengthArray[2])
-            throw new IllegalArgumentException("Illegal arguments");
+            throw new IllegalArgumentException("Exception because such a triangle would be degenerative");
 
         this.a = a;
         this.b = b;
