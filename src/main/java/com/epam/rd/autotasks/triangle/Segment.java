@@ -50,11 +50,19 @@ class Segment {
         if (a == c) // && b != d
             return null;
 
-        x = (d - b) / (a - c);
-        y = a * x + b;
+        if (start.getX() == end.getX())
+            x = start.getX();
+        else if (another.start.getX() == another.end.getX())
+            x = another.start.getX();
+        else
+            x = (d - b) / (a - c);
 
-        if ((start.getX() - x) * (end.getX() - x) > 0) return null;
-        if ((another.start.getX() - x) * (another.end.getX() - x) > 0) return null;
+        if (start.getY() == end.getY())
+            y = start.getY();
+        else if (another.start.getY() == another.end.getY())
+            y = another.start.getY();
+        else
+            y = a * x + b;
 
         return new Point(x, y);
 
