@@ -46,7 +46,7 @@ class Triangle {
             y = a.getY();
         } else if (bc.getStart().getY() == bc.getEnd().getY()) {
             x = a.getX();
-            y = bc.getStart().getX();
+            y = bc.getStart().getY();
         } else {
             k1 = Segment.getA(bc.getStart(), bc.getEnd());
             b1 = Segment.getB(bc.getStart(), bc.getEnd());
